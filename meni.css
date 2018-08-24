@@ -12,10 +12,18 @@ h1{
 	border: 5px solid purple;
 }
 
+/* id = 1 ocorrencia
+	classe = n > 1 ocorrencias
+
+	*/
 #olhaocss{
 	border: 5px solid blue;
 }
 
 .olhaaclass{
 	background-color: red;
+}
+
+#linha{
+	text-decoration: line-through;
 }
