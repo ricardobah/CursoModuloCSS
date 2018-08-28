@@ -10,6 +10,7 @@ table{
 
 h1{
 	border: 5px solid purple;
+	width: 30%;
 }
 
 /* id = 1 ocorrencia
@@ -18,9 +19,11 @@ h1{
 	*/
 #olhaocss{
 	border: 5px solid blue;
+	width: 30%;
 }
 
 .olhaaclass{
+	width: 10%;
 	background-color: red;
 }
 
