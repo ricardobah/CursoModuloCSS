@@ -1,0 +1,31 @@
+body{
+    border: 20px solid #5599ff;
+    width: 60%;
+}
+
+h1{
+    
+    margin-left: 1.5%; 
+}
+
+h5{
+    height:1px;
+    margin-left: 1.5%;
+}
+
+.publication{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid #555555;
+    padding-bottom: 5%;
+}
+
+a{
+    margin-left: 1%;
+}
+
+.margem{
+    border-left: 7px solid #555555;
+    /*margin-left: 15%;
+    */
+}
