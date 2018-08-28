@@ -10,6 +10,11 @@ img{
 h1{
     font-family: 'Press Start 2P';
     font-size: 325%;
+    margin-left: 1.66%;
+    padding: 1.66%;
+    text-transform: uppercase;
+    border-bottom: 5px solid #777777;
+    width: 85%;
 }
 button{
     margin: 10%;
