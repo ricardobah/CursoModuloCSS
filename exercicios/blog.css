@@ -9,10 +9,13 @@ h1{
 }
 
 h5{
+    text-transform: uppercase;
     height:1px;
     margin-left: 1.5%;
     font-family: 'Frijole';
 }
+
+
 
 .publication{
     margin-left: 5%;
