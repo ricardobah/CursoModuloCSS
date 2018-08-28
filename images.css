@@ -7,7 +7,10 @@ img{
     height: 30%;
 }
 
-
+h1{
+    font-family: 'Press Start 2P';
+    font-size: 325%;
+}
 button{
     margin: 10%;
     height: 30%;
