@@ -1,60 +1,26 @@
-body {
-	background-color: lightblue;
-	margin-left: 2%;
-}
-
-h1 {
-	color: navy;
-	font-family: Diplomata SC;
-	width: 75%;
-    margin-left: 10%;
-    background: #999999;
-}
-
-h4{
-	color:red;
-}
-
-h5{
-	color: #FF0001;
-
-}
-
-h6{
-	color: rgb(255,0,0);
-
-}
-
-h3{
-	color:rgba(255,0,0,.5);
-}
-
-h2{
-	color: rgba(255,0,0,.2);
-}
-
-input{
-	color: purple;
-	border-color: red;
-	border-width: 5px;
-}
-
-.dropdown{
-	position: relative;
-}
-
 .jumbotron{
-	margin-left: -2%;
-	margin-bottom: 0%;
-	background: #99ff00
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+
 }
-.jumbotron p{
-	margin-left: 20%;
-	
-	
+
+p{
+    font-family: 'Fredericka the Great';
+    font-size: 250%;
+}
+
+h1{
+    padding-bottom: 4%;
+    
+}
+
+body{
+    
+    background: #878787;
 }
 
 #jumbotron2{
-	background: lightblue;
-	
+    padding-top: 5%;
+    padding-bottom: 15%;
 }
