@@ -1,0 +1,21 @@
+*{
+	border: 1px solid grey;
+	width: 90%;
+}
+
+li p{
+	background : grey;
+}
+
+h1{
+	font-family: Indie Flower;
+}
+
+ol{
+	width: 35%;
+	
+}
+
+li{
+	padding-left: 50%;
+}
