@@ -24,8 +24,13 @@ aux=prompt("Todo list\n1.Add\n2.Remove\n3.Print\n99.Exit");
         if(lista==0){
             alert("Lista vazia!");
         }else{
-            
-            alert(lista);
+            lista.forEach(function(corl){
+                aux=aux+"\n"+corl;
+                if(corl==null){
+                    aux="Lista:";
+                }
+            })
+            alert(aux);
         }
     }else if (aux=="99"){
 
