@@ -18,7 +18,7 @@ aux=prompt("Todo list\n1.Add\n2.Remove\n3.Print\n99.Exit");
        lista.push(prompt("Value to add: "));
        
     }else if(aux=="2"){
-   
+        //USAR SPLICE splice("name", quantidade);
         lista=arrayRemove(lista, prompt("Value to remove: "));
     }else if(aux=="3"){
         if(lista==0){
