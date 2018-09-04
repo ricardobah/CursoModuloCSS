@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <audio id="myAudio">
+        <source src="assets/Feeling_Good.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -89,7 +92,9 @@
                         <a class="dropdown-item" href="#">34. Authorization</a>
                       </div>
                     </li>
-                    
+                    <li class="nav-item active">
+                        <a class="nav-link" onclick="playAudio()" href="#">Music  <span class="sr-only">(current)</span></a>
+                      </li>
                   </ul>
                   
                 </div>
@@ -136,6 +141,8 @@
 
 </body>
 <footer>
+    
     <script src="js/pisca.js"></script>
+    <script src="js/playAudio.js"></script>
 </footer>
 </html>
