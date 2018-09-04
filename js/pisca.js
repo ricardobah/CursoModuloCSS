@@ -14,4 +14,4 @@ setInterval( function(){
         jumbotron2.style.backgroundColor="rgb(235, 235, 235)";
     }
 }
-,1000);
+,500);
