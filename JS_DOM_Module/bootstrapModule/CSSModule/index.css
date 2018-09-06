@@ -1,0 +1,43 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+	color: navy;
+	font-family: Diplomata SC;
+	width: 75%;
+    margin-left: 20px;
+    background: #ff2288;
+}
+
+h4{
+	color:red;
+}
+
+h5{
+	color: #FF0001;
+
+}
+
+h6{
+	color: rgb(255,0,0);
+
+}
+
+h3{
+	color:rgba(255,0,0,.5);
+}
+
+h2{
+	color: rgba(255,0,0,.2);
+}
+
+input{
+	color: purple;
+	border-color: red;
+	border-width: 5px;
+}
+
+avd{
+	background: #ffff00;
+}

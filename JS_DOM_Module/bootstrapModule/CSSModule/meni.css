@@ -1,0 +1,32 @@
+body{
+
+	background: url(https://st2.depositphotos.com/4930557/8633/v/950/depositphotos_86333242-stock-illustration-seamless-background-with-different-glasses.jpg);
+}
+
+
+table{
+	background-color: #bbbbbb;
+}
+
+h1{
+	border: 5px solid purple;
+	width: 30%;
+}
+
+/* id = 1 ocorrencia
+	classe = n > 1 ocorrencias
+
+	*/
+#olhaocss{
+	border: 5px solid blue;
+	width: 30%;
+}
+
+.olhaaclass{
+	width: 20%;
+	background-color:#ff0000;
+}
+
+#linha{
+	text-decoration: line-through;
+}
