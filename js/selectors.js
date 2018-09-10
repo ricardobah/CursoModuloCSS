@@ -1,0 +1,1 @@
+$(".hig").css("background","purple");
