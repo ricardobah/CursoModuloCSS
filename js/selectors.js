@@ -17,4 +17,7 @@ $("button").click(function(){
     $(".hig").text(classe3);    
     $("#higid").text($("footer").html());  
     $("#oi").text($("input").attr("class"));  
+    //addClass
+    //removeClass
+    //toggleClass
 });
