@@ -15,5 +15,6 @@ $("button").click(function(){
     $(classe2).css("background","purple");
     $(classe3).css("background","purple");
     $(".hig").text(classe3);    
-    $("#higid").text($("footer").html());    
+    $("#higid").text($("footer").html());  
+    $("#oi").text($("input").attr("class"));  
 });
