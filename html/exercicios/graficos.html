@@ -68,12 +68,12 @@
     </div>
 
     <!--Grafico 2-->
-    
+
     <div class="canvas-container">
         <h1>Segundo turno</h1>
         <canvas id="myChart1">
             <script>
-               
+
 
                 var ctx = document.getElementById("myChart1").getContext('2d');
                 var myLineChart = new Chart(ctx, {
@@ -82,7 +82,7 @@
                         "labels": new Array("January", "February", "March", "April", "May", "June", "July"),
                         "datasets": [{
                             "label": "Cabeça",
-                            "data": new Array(0, 10, 60, 19, 44, 45, 80),
+                            "data": new Array(12, 10, 60, 19, 44, 45, 80),
                             "fill": false,
                             "borderColor": "rgb(75, 192, 192)",
                             "lineTension": 0.1
@@ -98,7 +98,32 @@
                     "options": {}
                 });
 
-               
+                var aux;
+                var filaMes = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+
+                console.log([0]);
+                async function demo() {
+                    //Loop p ficar alterando (no real troca p while true)
+                    for (var i = 0; ; i++) {
+                        //altera os meses
+                        for (var j = 0; j < myLineChart["data"]["datasets"].length; j++) {
+                            myLineChart["data"]["datasets"][j].data.shift();
+                            myLineChart["data"]["datasets"][j].data.push(Math.random() * 100);
+                        }
+                        //altera os valores
+                        myLineChart["data"]["labels"].push(filaMes.shift());
+                        aux = myLineChart["data"]["labels"].shift();
+                        filaMes.push(aux);
+
+
+                        myLineChart.update();
+                        await sleep(800);
+                    }
+                }
+                demo();
 
 
 
@@ -118,38 +143,11 @@
 
 
 <footer>
-    <script>
-        var aux;
-         var filaMes = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-                function sleep(ms) {
-                    return new Promise(resolve => setTimeout(resolve, ms));
-                }
-          
-                console.log([0]);
-        async function demo() {
-            //Loop p ficar alterando (no real troca p while true)
-            for (var i = 0;  ; i++) {
-                //altera os meses
-                aux = myLineChart["data"]["labels"].shift();
-                filaMes.push(aux);
-                myLineChart["data"]["labels"].push(filaMes.shift());
-                //altera os valores
-               for(var j=0; j<myLineChart["data"]["datasets"].length; j++){
-                myLineChart["data"]["datasets"][j].data.shift();
-                myLineChart["data"]["datasets"][j].data.push(Math.random()*100);
-               }
 
 
-                await sleep(500);
-            myLineChart.update();
-            }
-        }
-        demo();
-    </script>
-
-<br>
-<a href="../exercicios.html">return</a>
-<br>
+    <br>
+    <a href="../exercicios.html">return</a>
+    <br>
 </footer>
 
 </html>
