@@ -27,7 +27,7 @@
                     type: 'bar',
 
                     data: {
-                        labels: ["João Amoedo", "Ciro Gomes", "Bolsonaro", "Cabeça", "Marina Silva", "Haddad", "Brancos/Nulos"],
+                        labels: new Array("João Amoedo", "Ciro Gomes", "Bolsonaro", "Cabeça", "Marina Silva", "Haddad", "Brancos/Nulos"),
                         datasets: [{
                             label: ' Number of Votes',
                             data: [20, 8, 10, 51, 2, 6, 3],
@@ -35,7 +35,7 @@
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',
                                 'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 1)',
+                                'rgba(75, 192, 192, 0.2)',
                                 'rgba(153, 102, 255, 0.2)',
                                 'rgba(255, 159, 64, 0.2)'
                             ],
@@ -48,7 +48,36 @@
                                 'rgba(255, 159, 64, 1)'
                             ],
                             borderWidth: 1
-                        }]
+                        },
+                        {
+          label: 'Line Dataset',
+          data: [50, 50, 50, 50, 50, 50, 50],
+          borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            backgroundColor: [
+                                'rgba(255,99,132,0)',
+                                'rgba(54, 162, 235, 0)',
+                                'rgba(255, 206, 86, 0)',
+                                'rgba(75, 192, 192, 0)',
+                                'rgba(153, 102, 255, 0)',
+                                'rgba(255, 159, 64, 0)'
+                            ],
+          // Changes this dataset to become a line
+          type: 'line'
+        },
+        {
+          label: 'Line Dataset',
+          data: [100],
+            
+          // Changes this dataset to become a line
+          type: 'line'
+        }]
                     },
                     options: {
 
@@ -88,7 +117,7 @@
                             "lineTension": 0.1
                         },
                         {
-                            "label": "João Amoedo",
+                            "label": "Bolsonaro",
                             "data": new Array(54, 54, 54, 54, 54, 54, 54),
                             "fill": false,
                             "borderColor": "#ff0000",
@@ -106,23 +135,49 @@
 
                 console.log([0]);
                 async function demo() {
+                    var somaux;
                     //Loop p ficar alterando (no real troca p while true)
                     for (var i = 0; ; i++) {
+                        somaux=0;
                         //altera os meses
                         for (var j = 0; j < myLineChart["data"]["datasets"].length; j++) {
+                            if(somaux!=0){
+                                somaux=100-somaux;
+                            }else{
+
+                             somaux=Math.random() * 100;
+                            }
                             myLineChart["data"]["datasets"][j].data.shift();
-                            myLineChart["data"]["datasets"][j].data.push(Math.random() * 100);
+                            myLineChart["data"]["datasets"][j].data.push(somaux);
                         }
                         //altera os valores
                         myLineChart["data"]["labels"].push(filaMes.shift());
                         aux = myLineChart["data"]["labels"].shift();
                         filaMes.push(aux);
-
-
+                        
                         myLineChart.update();
+                        
                         await sleep(800);
                     }
                 }
+                
+                async function demo2(){
+                    var som,somaux;
+                    
+                    while(1){
+                        som=0;
+                        somaux=0;    
+                        for(var  k=0;k<5;k++){
+                            somaux=Math.random()* (100-som);
+                            som+=somaux;
+                            myChart["data"]["datasets"][0].data.shift();
+                            myChart["data"]["datasets"][0].data.push(somaux);
+                        }
+                        myChart.update();
+                        await sleep(1800);
+                    }
+                }
+                demo2();
                 demo();
 
 
